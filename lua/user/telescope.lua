@@ -8,9 +8,13 @@ local actions = require "telescope.actions"
 telescope.setup {
   defaults = {
 
+    -- file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+    -- generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
+
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
+    winblend=10,
 
     mappings = {
       i = {
@@ -25,7 +29,8 @@ telescope.setup {
         ["<Down>"] = actions.move_selection_next,
         ["<Up>"] = actions.move_selection_previous,
 
-        ["<CR>"] = actions.select_default,
+        -- ["<CR>"] = actions.select_default,
+        ["<CR>"] = actions.select_tab,
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
@@ -46,7 +51,8 @@ telescope.setup {
 
       n = {
         ["<esc>"] = actions.close,
-        ["<CR>"] = actions.select_default,
+        -- ["<CR>"] = actions.select_default,
+        ["<CR>"] = actions.select_tab,
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
@@ -92,5 +98,23 @@ telescope.setup {
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
+
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
+    }
+
+    -- fzy_native = {
+    --   override_generic_sorter = false,
+    --   override_file_sorter = true,
+    -- }
+
   },
 }
+-- require('telescope').load_extension('fzy_native')
+require('telescope').load_extension('fzf')
+-- telescope.load_extension('fzf')
+
