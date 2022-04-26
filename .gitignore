@@ -39,5 +39,10 @@ luac.out
 *.x86_64
 *.hex
 
+# Kite
+pack/kite
+
+# Tmux
+tmux*.log
 
 plugin/packer_compiled.lua
