@@ -62,8 +62,8 @@ return packer.startup(function(use)
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   -- use "folke/tokyonight.nvim"
-  -- use "gruvbox-community/gruvbox"
-  use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  use "gruvbox-community/gruvbox"
+  -- use {"ellisonleao/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use "shaunsingh/nord.nvim"
 
   -- Completion
