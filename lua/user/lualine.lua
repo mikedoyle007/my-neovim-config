@@ -65,7 +65,8 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		-- theme = "auto",
+		theme = "gruvbox_dark",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
@@ -74,7 +75,22 @@ lualine.setup({
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { mode },
-		lualine_c = {},
+		lualine_c = {
+      {
+        'filename',
+        file_status = true,
+        path = 1,                -- 0: Just the filename
+                                 -- 1: Relative path
+                                 -- 2: Absolute path
+                                 -- 3: Absolute path, with tilde as the home directory
+        shorting_target = 40,
+        symbols = {
+          modified = '[+]',      -- Text to show when the file is modified.
+          readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
+          unnamed = '[No Name]', -- Text to show for unnamed buffers.
+        }
+      }
+    },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },
