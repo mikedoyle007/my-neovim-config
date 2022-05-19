@@ -103,6 +103,9 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
 
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
   -- Docs
   use "nanotee/luv-vimdocs"
   use "milisims/nvim-luaref"

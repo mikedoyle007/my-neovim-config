@@ -82,7 +82,13 @@ keymap("n", "<leader>sd", "<cmd>lua require('user.customTelescope').edit_neovim(
 keymap("n", "<C-_>", "<cmd>lua require('user.customTelescope').curr_buff()<cr>", opts)
 
 -- Vim Fugitive --
-keymap("n", "<leader>gs", ":G<CR>", opts)
+-- keymap("n", "<leader>gs", ":G<CR>", opts)
+
+-- Neogit --
+keymap("n", "<leader>gs", ":Neogit<CR>", opts)
+
+-- Diffview --
+keymap("n", "<C-G>", ":DiffviewOpen<CR>", opts)
 
 -- Quickly save and execute (source) a file
 keymap("n", "<leader>x", ":wa<CR>:so %<CR>", opts)
