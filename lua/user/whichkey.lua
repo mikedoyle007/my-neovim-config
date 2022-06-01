@@ -123,9 +123,17 @@ local mappings = {
     o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+    -- d = {
+    --   "<cmd>Gitsigns diffthis HEAD<cr>",
+    --   "Diff",
+    -- },
     d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
+      "<cmd>DiffviewOpen<cr>",
       "Diff",
+    },
+    w = {
+      "<cmd>DiffviewClose<cr>",
+      "Diff close",
     },
   },
 
@@ -175,6 +183,7 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    p = { "<cmd>Telescope find_files<cr>", "Project files" },
   },
 
   t = {
