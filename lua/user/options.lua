@@ -2,7 +2,7 @@ local options = {
   hidden = true,                           -- required to keep multiple buffers open
   backup = false,                          -- creates a backup file
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  cmdheight = 2,                           -- more space in the neovim command line for displaying messages
+  cmdheight = 1,                           -- more space in the neovim command line for displaying messages (used to be set to 2)
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
@@ -41,6 +41,7 @@ local options = {
   inccommand = "split",                       -- shows partial off-screen results in a preview window
   -- guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
   guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
+  winbar = "%=%m %f",
 }
 
 vim.opt.shortmess:append "c"
