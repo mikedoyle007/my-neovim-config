@@ -88,7 +88,9 @@ keymap("n", "<C-_>", "<cmd>lua require('user.customTelescope').curr_buff()<cr>",
 keymap("n", "<leader>gs", ":Neogit<CR>", opts)
 
 -- Diffview --
-keymap("n", "<C-G>", ":DiffviewOpen<CR>", opts)
+-- keymap("n", "<C-S-G>", ":DiffviewOpen<CR>", opts)
+-- I have this mapped in whichkey as well, keeping this as a backup
+keymap("n", "<C-g>", ":DiffviewClose<CR>", opts)
 
 -- Quickly save and execute (source) a file
 keymap("n", "<leader>x", ":wa<CR>:so %<CR>", opts)
