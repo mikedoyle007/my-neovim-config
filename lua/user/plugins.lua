@@ -111,7 +111,7 @@ return packer.startup(function(use)
   use "milisims/nvim-luaref"
 
   -- My custom plugins
-  use "/Users/michaeldoyle/Code/plugins/stackmap.nvim"
+  -- use "/Users/michaeldoyle/Code/plugins/stackmap.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

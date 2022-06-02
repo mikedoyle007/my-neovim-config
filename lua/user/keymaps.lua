@@ -78,8 +78,9 @@ keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files(require('
 keymap("n", "<C-f>", "<cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy())<cr>", opts)
 -- Custom for config files
 keymap("n", "<leader>sd", "<cmd>lua require('user.customTelescope').edit_neovim()<cr>", opts)
--- Fuzzy Find - Current Buffer ( <C-/>)
-keymap("n", "<C-_>", "<cmd>lua require('user.customTelescope').curr_buff()<cr>", opts)
+-- Fuzzy Find - Current Buffer ( <C-/>)  On M1 Macs this is actually <C-/>, but on Intel Mac it is <C-_>
+-- keymap("n", "<C-_>", "<cmd>lua require('user.customTelescope').curr_buff()<cr>", opts)
+keymap("n", "<C-/>", "<cmd>lua require('user.customTelescope').curr_buff()<cr>", opts)
 
 -- Vim Fugitive --
 -- keymap("n", "<leader>gs", ":G<CR>", opts)
@@ -106,7 +107,7 @@ keymap("n", "<leader>p", "<C-^><CR>", opts)
 -- TODO: This is not reloading currently because package.loaded.customTelescope is already nil
 keymap("n", "<F4>", ":lua package.loaded.customTelescope = nil <cr>:source ~/.config/nvim/init.lua<cr>", opts)
 
--- Dummy keymap to test with
-keymap("n", "<leader><leader>h", "echo 'I am a test keymap'", opts)
-
+-- Splits --
+-- Vertical Split
+keymap("n", "<leader>\\", ":vsp<CR>", opts)
 
